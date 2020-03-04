@@ -9,7 +9,8 @@
     }
 
     function onReady(smart)  {
-      if (smart.hasOwnProperty('patient')) {
+        if (smart.hasOwnProperty('patient')) {
+            debugger
         var patient = smart.patient;
         var pt = patient.read();
         var obv = smart.patient.api.fetchAll({
