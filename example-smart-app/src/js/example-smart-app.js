@@ -3,7 +3,8 @@
         debugger;
     var ret = $.Deferred();
 
-    function onError() {
+        function onError() {
+            debugger
       console.log('Loading error', arguments);
       ret.reject();
     }
