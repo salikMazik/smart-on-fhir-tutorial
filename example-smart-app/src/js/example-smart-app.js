@@ -1,5 +1,6 @@
 (function(window){
-  window.extractData = function() {
+    window.extractData = function () {
+        debugger;
     var ret = $.Deferred();
 
     function onError() {
