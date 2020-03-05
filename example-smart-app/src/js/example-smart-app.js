@@ -69,6 +69,7 @@
 
 
       function onReady(smart) {
+          console.log(smart);
           if (smart.hasOwnProperty('patient')) {
               console.log(smart)
               var patient = smart.patient;
@@ -85,10 +86,11 @@
                       }
                   }
               });
-
+              console.log(obv)
               $.when(pt, obv).fail(onError);
 
               $.when(pt, obv).done(function (patient, obv) {
+                  console.log(patient);
                   var byCodes = smart.byCodes(obv, 'code');
                   var gender = patient.gender;
                   var dob = new Date(patient.birthDate);
