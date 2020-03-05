@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -323,7 +323,7 @@ After initially registering your SMART app, it can take up to 10 minutes for you
     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">'./lib/fhir-client-cerner-additions-1.0.0.js'</span><span class="nt">&gt;&lt;/script&gt;</span>
     <span class="nt">&lt;script&gt;</span>
       <span class="nx">FHIR</span><span class="p">.</span><span class="nx">oauth2</span><span class="p">.</span><span class="nx">authorize</span><span class="p">({</span>
-        <span class="s1">'client_id'</span><span class="p">:</span> <span class="s1">'&lt;enter your client id here&gt;'</span><span class="p">,</span>
+        <span class="s1">' 14d7e463-3658-46d8-a6b4-e7786bb91be6'</span><span class="p">:</span> <span class="s1">'&lt;14d7e463-3658-46d8-a6b4-e7786bb91be6&gt;'</span><span class="p">,</span>
         <span class="s1">'scope'</span><span class="p">:</span>  <span class="s1">'patient/Patient.read patient/Observation.read launch online_access openid profile'</span>
       <span class="p">});</span>
     <span class="nt">&lt;/script&gt;</span>
@@ -715,16 +715,17 @@ https://<code class="prettyprint">&lt;gh-username&gt;</code>.github.io/smart-on-
 <blockquote>
 <p>launch-smart-sandbox.html</p>
 </blockquote>
-<pre class="highlight plaintext"><code>...
-&lt;!-- Currently, the SMART App Launcher (https://launch.smarthealthit.org) does not check/validate the client_id field.
-        If/when this changes, or when working with other authorization servers, please update the client_id field here. --&gt;
-&lt;script&gt;
-  FHIR.oauth2.authorize({
-    'client_id': 'YOUR-SMART-HEALTH-IT-CLIENT-ID-HERE',
+<pre class="highlight plaintext"><code>
+    ...
+    &lt;!-- Currently, the SMART App Launcher (https://launch.smarthealthit.org) does not check/validate the client_id field.
+    If/when this changes, or when working with other authorization servers, please update the client_id field here. --&gt;
+    &lt;script&gt;
+    FHIR.oauth2.authorize({
+    'client_id': ' 14d7e463-3658-46d8-a6b4-e7786bb91be6',
     'scope':  'patient/Patient.read patient/Observation.read launch online_access openid profile'
-  });
-&lt;/script&gt;
-...
+    });
+    &lt;/script&gt;
+    ...
 </code></pre>
 
 <h1 id="standalone-app-launch-for-patient-access-workflow">Standalone App Launch for Patient Access Workflow</h1>
