@@ -76,7 +76,7 @@
               console.log(patient)
               var pt = patient.read();
               console.log(pt)
-              var obv = smart.patient.api.fetchAll({
+              var obv = await smart.patient.api.fetchAll({
                   type: 'Observation',
                   query: {
                       code: {
@@ -89,8 +89,9 @@
               console.log(obv)
               $.when(pt, obv).fail(onError);
 
-              $.when(pt, obv).done(function (patient, obv) {
-                  console.log(patient);
+              $.when(pt, obv).done(
+                  function (pt, obv) {
+                      console.log(pt);
                   var byCodes = smart.byCodes(obv, 'code');
                   var gender = patient.gender;
                   var dob = new Date(patient.birthDate);
