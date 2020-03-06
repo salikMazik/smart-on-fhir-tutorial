@@ -1,3 +1,5 @@
+import { isNullOrUndefined } from "util";
+
 (function(window){
   window.extractData = function() {
     var ret = $.Deferred();
@@ -87,6 +89,9 @@
                   }
               });
               console.log(obv)
+              if (isNullOrUndefined(obv)) {
+                  onError()
+              }
               $.when(pt, obv).fail(onError);
 
               $.when(pt, obv).done(function (patient, obv) {
